@@ -1,0 +1,6 @@
+09:00:00.123456 IP 10.1.1.1.5000 > 10.2.2.2.80: Flags [P.], seq 1:101, ack 1, win 65535, length 100
+09:00:00.223456 IP 10.2.2.2.80 > 10.1.1.1.5000: Flags [P.], seq 1:201, ack 101, win 65535, length 200
+09:00:01.123456 IP 10.1.1.1.5000 > 10.2.2.2.80: Flags [.], seq 101:201, ack 201, win 65535, length 100
+... (truncated sample)
+
+Use `tcpdump -r <file.pcap>` to see full packet list; Wireshark provides a GUI with packet decode and statistics.

@@ -84,4 +84,43 @@ This repository does not include an explicit license file. Add a LICENSE if you 
 
 ---
 
+## Examples & sample outputs 📸
+
+To help you get started quickly, this repository includes a small `examples/` folder with sample outputs and a placeholder Wireshark screenshot.
+
+- `examples/flowmon_sample.txt` — a small *FlowMonitor* summary (throughput, packets, delay, jitter, loss).
+
+- `examples/pcap_tcpdump_sample.txt` — a short `tcpdump`-style packet listing extracted from a `.pcap` file.
+
+- `examples/wireshark_sample.svg` — a simple SVG placeholder that mimics a Wireshark packet list screenshot (useful for README or documentation).
+
+Quick previews:
+
+FlowMonitor sample:
+
+```text
+Flow ID: 1
+Src Addr: 10.1.1.1
+Dst Addr: 10.2.2.2
+Tx Packets: 1000
+Rx Packets: 998
+Lost Packets: 2
+Throughput: 1.25 Mbps
+Average Delay: 3.2 ms
+```
+
+Tcpdump / pcap sample:
+
+```text
+09:00:00.123456 IP 10.1.1.1.5000 > 10.2.2.2.80: Flags [P.], seq 1:101, ack 1, win 65535, length 100
+09:00:00.223456 IP 10.2.2.2.80 > 10.1.1.1.5000: Flags [P.], seq 1:201, ack 101, win 65535, length 200
+...
+```
+
+Screenshot placeholder (click to open):
+
+![Wireshark sample](./examples/wireshark_sample.svg)
+
+---
+
 *Created and pushed by the maintainer script.*

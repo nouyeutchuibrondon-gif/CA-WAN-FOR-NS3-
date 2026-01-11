@@ -1,0 +1,13 @@
+Flow ID: 1
+Src Addr: 10.1.1.1
+Dst Addr: 10.2.2.2
+Tx Packets: 1000
+Rx Packets: 998
+Lost Packets: 2
+Tx Bytes: 800000
+Rx Bytes: 798000
+Throughput: 1.25 Mbps
+Average Delay: 3.2 ms
+Jitter: 0.3 ms
+
+Summary: Small loss due to simulated link congestion; throughput and delay measured over 10s run.
