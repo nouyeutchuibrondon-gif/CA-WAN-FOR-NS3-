@@ -1,0 +1,11 @@
+QoS_Enabled: 1
+Queue_Size: 100
+FTP_Flows: 3
+VoIP_Delay_ms: 37.062
+VoIP_Jitter_ms: 3.24663
+VoIP_Loss_%: 0
+VoIP_Throughput_Kbps: 75.2893
+FTP_Delay_ms: 85.6843
+FTP_Jitter_ms: 1.35779
+FTP_Loss_%: 3.63901
+FTP_Throughput_Kbps: 3953.97

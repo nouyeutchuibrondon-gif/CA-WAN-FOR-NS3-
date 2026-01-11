@@ -1,0 +1,32 @@
+{
+  "network": {
+    "name": "RegionalBank WAN",
+    "routing_type": "static",
+    "simulation_time": 20,
+    "failure_time": 5,
+    "data_rate": "10Mbps",
+    "packet_size": 1024,
+    "convergence_time": 0,
+    "packet_delivery_ratio": 17.6471
+  },
+  "nodes": [
+    {"id": 0, "name": "Branch-C", "type": "client", "ip": "10.1.1.1"},
+    {"id": 1, "name": "DC-A", "type": "router", "ip": ["10.1.1.2", "10.1.4.1", "10.1.3.1", "10.1.5.1"]},
+    {"id": 2, "name": "DR-B", "type": "server", "ip": ["10.1.4.2", "10.1.3.2", "10.1.6.2"]},
+    {"id": 3, "name": "Backup-Router", "type": "backup", "ip": ["10.1.5.2", "10.1.6.1"]}
+  ],
+  "links": [
+    {"from": 0, "to": 1, "name": "Access Link", "bandwidth": "100Mbps", "delay": "2ms", "type": "access"},
+    {"from": 1, "to": 2, "name": "Primary WAN", "bandwidth": "10Mbps", "delay": "5ms", "type": "primary"},
+    {"from": 1, "to": 2, "name": "Backup Direct", "bandwidth": "2Mbps", "delay": "10ms", "type": "backup"},
+    {"from": 1, "to": 3, "name": "Backup Path 1", "bandwidth": "5Mbps", "delay": "20ms", "type": "backup-path"},
+    {"from": 3, "to": 2, "name": "Backup Path 2", "bandwidth": "5Mbps", "delay": "20ms", "type": "backup-path"}
+  ],
+  "statistics": {
+    "total_packets_sent": 170,
+    "total_packets_received": 30,
+    "packet_delivery_ratio": 17.6471,
+    "failure_occurred": true,
+    "backup_activated": false
+  }
+}
